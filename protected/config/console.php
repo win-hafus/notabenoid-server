@@ -4,7 +4,7 @@
 // Any writable CConsoleApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Notabenoid.Org',
+	'name'=>'Notabenoid.org',
 	"language" => "ru",
 	"sourceLanguage" => "en",
 
@@ -18,7 +18,7 @@ return array(
 		"db" => array(
 			"connectionString" => "pgsql:host=localhost;dbname=notabenoid",
 			"username" => "notabenoid",
-			"password" => "",
+			"password" => "winhafus?",
 			"charset" => "utf8",
 
 			"emulatePrepare" => true,

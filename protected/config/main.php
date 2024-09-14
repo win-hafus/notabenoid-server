@@ -75,7 +75,7 @@ return array(
 		"db" => [
 			"connectionString" => "pgsql:host=localhost;dbname=notabenoid",
 			"username" => "notabenoid",
-			"password" => "",
+			"password" => "winhafus",
 			"charset" => "utf8",
 			"emulatePrepare" => true,
 			"enableProfiling" => true,
