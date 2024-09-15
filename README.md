@@ -15,15 +15,18 @@
 в процессе установки вас может поджидать много сюрпризов. Будет здорово, если какие-нибудь пряморукие люди
 улучшат код в сторону его более простой распространяемости и напишут более человеческую документацию. 
 
-В postgres больше нету столбца d.adsrc, поэтому эта вся поебота не работает, но если вы хорошо разбираетесь в php, то флаг вам в руки, конечно 
+## В postgres больше нету столбца d.adsrc, поэтому эта вся поебота не работает, но если вы хорошо разбираетесь в php, то флаг вам в руки, конечно (и напишите мне в тг если у вас всё получилось, я заебался(((( )
+
+t.me/manager_radar
 
 ## Требования
 Нам понадобятся:
-	* Оказаться в прошлом
+  * Оказаться в прошлом (обязательное условие, причины смотерть на 3 строчки выше!!!)
   * php 5.5 или выше
-  * phpшные модули: gd, pdo-pgsql, curl, memcache
+  * phpшные модули: gd, pdo-pgsql, curl, memcache (на винде +150% к ёбани)
   * postgresql 9.1 или выше
   * memcached
+  * Стальные нервы и жопа
 
 ## Установка
 1. Клонируем репозиторий в какую-нибудь директорию, допустим, `/srv/notabenoid.com`
@@ -61,8 +64,9 @@
         sudo -u postgres createuser -E -P notabenoid
         sudo -u postgres createdb -O notabenoid notabenoid
         psql -U notabenoid < init.sql
+   ## !!!На последней строчке: если у вас не возникло проблем с peer пользователя (любого) напишите мне в тг: t.me/manager_radar (пожалуйста):(
 
-5. Настало время охуительных конфигов! В /protected/config/main.php найдите строки
+6. Настало время охуительных конфигов! В /protected/config/main.php найдите строки
 
 		"connectionString" => "pgsql:host=localhost;dbname=notabenoid",
 		"username" => "notabenoid",
@@ -70,7 +74,7 @@
 
 	и пропишите туда название постгресной базы, юзера и пароль. Чуть ниже в строках 
 
-		"passwordSalt" => "Ел сам в Акчарлаке кал рачка в масле",
+		"passwordSalt" => "sosijopunahuytietochitaesh",
 		"domain" => "notabenoid.org",
 		"adminEmail" => 'support@notabenoid.org',
 		"commentEmail" => "comment@notabenoid.org",
@@ -80,7 +84,7 @@
 	адреса, которые будут стоять в поле "From" всякого спама, который рассылает сайт. Аналогичный трюк надобно
 	провести с файлом `/protected/config/console.php`
 
-6. В крон прописываем:
+7. В крон прописываем:
 
 		0 0 * * * /usr/bin/php /srv/notabenoid.com/protected/yiic maintain midnight
 		0 4 * * * /usr/bin/php /srv/notabenoid.com/protected/yiic maintain dailyfixes
@@ -88,9 +92,10 @@
 	и последнюю команду (`/usr/bin/php /srv/notabenoid.com/protected/yiic maintain dailyfixes`) непременно
 	исполняем сами.
 
-7. Теперь, по идее, вся эта херня должна взлететь. Зарегистрируйте первого пользователя и пропишите его
+8. Теперь, по идее, вся эта херня должна взлететь (нет). Зарегистрируйте первого пользователя и пропишите его
    логин в группах со спецправами в переменной `private static $roles` в файле `/protected/components/WebUser.php`.
-   Полагаю, также будет мудро несколько подправить основной шаблон (`/protected/views/layouts/v3.php`) и морду
+   Полагаю, также будет мудро несколько подправить основной шаблон (`/protected/views/layouts/v3.php`) и морду (набить
+   человеку, который сделал эту хуйню с sql)
    (`/protected/views/site/index.php`).
    
 *чмг-лов, Митя Уйский.*
