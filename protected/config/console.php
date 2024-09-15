@@ -42,8 +42,8 @@ return array(
 
 	'params' => [
 		'domain' => 'notabenoid.org',
-		'adminEmail' => 'support@notabenoid.org',
-		"commentEmail" => "comment@notabenoid.org",
-		"systemEmail" => "no-reply@notabenoid.org",
+		'adminEmail' => 'konstantin.pirs@notabenoid.org',
+		"commentEmail" => "konstantin.pirs@notabenoid.org",
+		"systemEmail" => "konsatntin.pirs@notabenoid.org",
 	],
 );

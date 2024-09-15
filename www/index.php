@@ -1,11 +1,30 @@
 <?php
 function is_developer() {
-	return $_SERVER["SERVER_NAME"] == "notabenoid.dev.romakhin.ru";
+	return $_SERVER["SERVER_NAME"] == "notabenoid.rts";
 }
 
 function prr($obj, $title = '') {
 	echo "\n<pre>" . ($title != '' ? "<b>{$title}</b>\n" : "") . htmlspecialchars(print_r($obj, true)) . "</pre>\n";
 }
+
+ // server {
+ // 	server_name notabenoid.com;
+ // 	listen 80;
+ // 	root /srv/notabenoid.com/www;
+ // 	index index.php;
+ // 	location / {
+ // 		try_files $uri $uri/ /index.php?$args;
+ // 	}
+ // 	location ~ \.php$ {
+ // 		fastcgi_split_path_info ^(.+\.php)(/.+)$;
+ // 		fastcgi_pass unix:/var/run/php5-fpm.sock;
+ // 		fastcgi_index index.php;
+ // 		include fastcgi_params;
+ // 	}
+ // 	location ~ ^/(assets|img|js|css) {
+ // 		try_files $uri =404;
+ // 	}
+ // }
 
 function p() {
 	return Yii::app()->params;

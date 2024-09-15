@@ -75,7 +75,17 @@ return array(
 		"db" => [
 			"connectionString" => "pgsql:host=localhost;dbname=notabenoid",
 			"username" => "notabenoid",
+<<<<<<< HEAD
 			"password" => "winhafus",
+=======
+			"password" => "winhafus?",
+			"passwordSalt" => "Ел сам в Акчарлаке кал рачка в масле",
+ 			"domain" => "notabenoid.org",
+ 			"adminEmail" => 'kostantin.pirs@notabenoid.org',
+ 			"commentEmail" => "kostantin.pirs@notabenoid.org",
+ 			"systemEmail" => "konstantin.pirs@notabenoid.org",
+
+>>>>>>> 2851e10 (Ебанный README.md)
 			"charset" => "utf8",
 			"emulatePrepare" => true,
 			"enableProfiling" => true,
